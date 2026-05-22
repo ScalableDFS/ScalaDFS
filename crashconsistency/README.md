@@ -8,7 +8,7 @@ The experiment continuously performs parallel write and fsync workloads from cli
 
 After OSS recovery and filesystem reconnection, the framework verifies whether the data ranges for which fsync() successfully returned before the crash are correctly persisted.
 
-Each writer process records the latest successfully completed fsync sequence number, and the recovered file contents are checked to confirm that the corresponding sequence data exists.
+Each writer thread records the latest successfully completed fsync sequence number, and the recovered file contents are checked to confirm that the corresponding sequence data exists.
 
 ## Files
 
@@ -33,7 +33,7 @@ Reconnects and remounts Lustre OSTs after OSS reboot.
 Main orchestration script for the crash consistency experiment.
 
 Functions:
-- Starts multiple parallel writer processes
+- Starts multiple parallel writer threads
 - Forces simultaneous OSS crashes
 - Waits for OSS reboot and recovery
 - Verifies fsync persistence after recovery
