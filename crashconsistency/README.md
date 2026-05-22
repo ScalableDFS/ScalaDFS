@@ -1,6 +1,6 @@
 # Crash Consistency Experiment Framework
 
-This directory contains the scripts used for distributed crash consistency experiments in the DNS environment.
+This directory contains the scripts used for distributed crash consistency experiments in the DFS environment.
 
 ## Overview
 
