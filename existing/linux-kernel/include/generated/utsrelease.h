@@ -1,0 +1,1 @@
+#define UTS_RELEASE "4.18.0-477.27.1.el8_lustre.x86_64Eurosys-orig"
